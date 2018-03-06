@@ -1,4 +1,4 @@
-package org.ystashko.docsearch.org.ystashko.docsearch.config;
+package org.ystashko.docsearch.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -19,7 +19,7 @@ public class AppConfig {
     }
 
     @Bean
-    public DocumentService assetService(RestTemplate restTemplate) {
+    public DocumentService documentService(RestTemplate restTemplate) {
         return new RestDocumentService(serverLocation, restTemplate);
     }
 
